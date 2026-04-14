@@ -1,0 +1,26 @@
+
+Trigger TRG_HRA_PRED_VLOZENIM compiled
+
+
+Errors for TRIGGER TRG_HRA_PRED_VLOZENIM:
+
+LINE/COL ERROR
+-------- ------------------------------------------------------------
+3/3      PL/SQL: Statement ignored
+3/3      PLS-00905: object SYSTEM.ZABRAN_HRE is invalid
+
+Trigger TRG_TAH_PRED_VLOZENIM compiled
+
+
+Trigger TRG_TAH_PO_VLOZENI compiled
+
+
+Trigger TRG_HRA_PO_ZMENE_STAVU compiled
+
+
+Errors for TRIGGER TRG_HRA_PO_ZMENE_STAVU:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------
+9/5      PL/SQL: Statement ignored
+9/5      PLS-00905: object SYSTEM.KONEC_HRY is invalid

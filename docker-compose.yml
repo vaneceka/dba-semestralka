@@ -1,0 +1,21 @@
+services:
+  oracle:
+    image: gvenzl/oracle-free:latest
+    container_name: piskvorky-oracle
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: "oracle"
+      APP_USER: "APP"
+      APP_USER_PASSWORD: "app"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - ./sql:/sql
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  oracle_data:
