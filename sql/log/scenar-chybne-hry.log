@@ -1,0 +1,24 @@
+Test: Prilis mala sirka (4)
+Spravne zachyceno: ORA-20100: Chybny parametr: 3
+ORA-06512: at "SYSTEM.ZABRAN_HRE", line 5
+ORA-06512: at "SYSTEM.TRG_HRA_KONTROLA_START", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_HRA_KONTROLA_START'
+Test: Prilis velka sirka (25)
+Spravne zachyceno: ORA-20100: Chybny parametr: 4
+ORA-06512: at "SYSTEM.ZABRAN_HRE", line 5
+ORA-06512: at "SYSTEM.TRG_HRA_KONTROLA_START", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_HRA_KONTROLA_START'
+Test: Prilis dlouha rada (20)
+Spravne zachyceno: ORA-20100: Chybny parametr: 6
+ORA-06512: at "SYSTEM.ZABRAN_HRE", line 5
+ORA-06512: at "SYSTEM.TRG_HRA_KONTROLA_START", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_HRA_KONTROLA_START'
+Test: Hrac hraje sam proti sobe
+Spravne zachyceno: ORA-20101: Hrac nemuze hrat proti sobe.
+ORA-06512: at "SYSTEM.ZABRAN_HRE", line 6
+ORA-06512: at "SYSTEM.TRG_HRA_KONTROLA_START", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_HRA_KONTROLA_START'
+
+
+PL/SQL procedure successfully completed.
+

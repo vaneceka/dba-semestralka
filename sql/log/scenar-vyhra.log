@@ -1,0 +1,17 @@
+DECLARE
+*
+ERROR at line 1:
+ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+ORA-06512: at line 32
+
+https://docs.oracle.com/error-help/db/ora-04091/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-04091/
+https://docs.oracle.com/error-help/db/ora-06512/
+https://docs.oracle.com/error-help/db/ora-04088/

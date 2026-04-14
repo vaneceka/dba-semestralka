@@ -1,0 +1,75 @@
+--- Zkousim: Tah mimo papir (Alice na 15,15)
+CHYBA ZACHYCENA -> ORA-20003: Tah mimo papir.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 13
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Spravny tah zacinajiciho hrace (Alice 1,1)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Hrac neni na rade (Alice se pokousi hrat znovu)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Tah na obsazene pole (Bob na 1,1)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Spravny tah (Bob 2,1)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Spravny tah (Alice 1,2)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Spravny tah (Bob 2,2)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Spravny tah (Alice 1,3)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Spravny tah (Bob 2,3)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Spravny tah (Alice 1,4)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Spravny tah (Bob 2,4)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+--- Zkousim: Vitezny tah (Alice 1,5)
+CHYBA ZACHYCENA -> ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.VYHRA", line 6
+ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
+--- Zkousim: Tah v ukoncene hre (Bob 2,5)
+CHYBA ZACHYCENA -> ORA-20005: Neni na rade tento hrac.
+ORA-06512: at "SYSTEM.ZABRAN_TAHU", line 23
+ORA-06512: at "SYSTEM.TRG_TAH_PRED_VLOZENIM", line 2
+ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PRED_VLOZENIM'
+
+
+PL/SQL procedure successfully completed.
+
