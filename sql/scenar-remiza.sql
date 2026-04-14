@@ -23,26 +23,26 @@ BEGIN
 
  -- 25 tahů, přísné střídání (Alice, Bob, Alice, Bob...)
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 1, 1);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   1, 2);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 1, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   1, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 1, 2);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   1, 4);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 1, 5);
   
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   2, 1);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 2, 2);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   2, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 2, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   2, 2);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 2, 4);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   2, 5);
   
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 3, 1);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   3, 2);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 3, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   3, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 3, 2);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   3, 4);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 3, 5);
 
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   4, 1);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 4, 2);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   4, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 4, 3);
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   4, 2);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 4, 4);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   4, 5);
 
@@ -50,7 +50,7 @@ BEGIN
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   5, 2);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 5, 3);
   INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_bob,   5, 4);
-  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 5, 5); -- Remíza
+  INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, v_alice, 5, 5);
   vypis_papir;
   COMMIT;
 

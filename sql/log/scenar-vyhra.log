@@ -1,17 +1,111 @@
-DECLARE
-*
-ERROR at line 1:
-ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
-ORA-06512: at "SYSTEM.VYHRA", line 6
-ORA-06512: at "SYSTEM.VYHRA", line 6
-ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
-ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
-ORA-06512: at line 32
+--- PAPIR (hra_id=1) ---
+ 1: X         
+ 2:           
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: X         
+ 2: O         
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XX        
+ 2: O         
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XX        
+ 2: OO        
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XXX       
+ 2: OO        
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XXX       
+ 2: OOO       
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XXXX      
+ 2: OOO       
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XXXX      
+ 2: OOOO      
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PAPIR (hra_id=1) ---
+ 1: XXXXX     
+ 2: OOOO      
+ 3:           
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- VYHRY_ZACINAJICI ---
+hra_id=1, zacinajici=Alice, pocet_tahu=9
+--- HRA ---
+id=1, 10x10, delka=5, zacina=X, stav_id=2, casX=0, casO=0
+--- HRAC ---
+id=1, Alice
+id=2, Bob
+id=3, Cyril
 
-https://docs.oracle.com/error-help/db/ora-04091/
 
+PL/SQL procedure successfully completed.
 
-More Details :
-https://docs.oracle.com/error-help/db/ora-04091/
-https://docs.oracle.com/error-help/db/ora-06512/
-https://docs.oracle.com/error-help/db/ora-04088/

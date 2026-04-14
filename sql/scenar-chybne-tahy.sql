@@ -14,14 +14,20 @@ DECLARE
     END LOOP;
   END;
 
-  PROCEDURE zkus_tah(p_hrac NUMBER, p_r NUMBER, p_s NUMBER, p_popis VARCHAR2) IS
+ PROCEDURE zkus_tah(p_hrac NUMBER, p_r NUMBER, p_s NUMBER, p_popis VARCHAR2) IS
+    v_errmsg VARCHAR2(4000);
   BEGIN
     DBMS_OUTPUT.PUT_LINE('--- Zkousim: ' || p_popis);
     INSERT INTO TAH(hra_id, hrac_id, radek, sloupec) VALUES (v_hra_id, p_hrac, p_r, p_s);
     DBMS_OUTPUT.PUT_LINE('Vysledek: Tah uspesne proveden.');
   EXCEPTION
     WHEN OTHERS THEN
-      DBMS_OUTPUT.PUT_LINE('CHYBA ZACHYCENA -> ' || SQLERRM);
+      v_errmsg := SQLERRM;
+      -- Pokud zpráva obsahuje více řádků (systémový stack), uřízneme vše kromě prvního řádku
+      IF INSTR(v_errmsg, CHR(10)) > 0 THEN
+        v_errmsg := SUBSTR(v_errmsg, 1, INSTR(v_errmsg, CHR(10)) - 1);
+      END IF;
+      DBMS_OUTPUT.PUT_LINE('CHYBA ZACHYCENA -> ' || v_errmsg);
   END;
 
 BEGIN

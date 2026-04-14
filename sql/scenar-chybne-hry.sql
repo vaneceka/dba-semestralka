@@ -4,7 +4,8 @@ DECLARE
   v_alice     NUMBER;
   v_bob       NUMBER;
 
-  PROCEDURE zkus_hru(p_sirka NUMBER, p_vyska NUMBER, p_delka NUMBER, p_hx NUMBER, p_ho NUMBER, p_popis VARCHAR2) IS
+PROCEDURE zkus_hru(p_sirka NUMBER, p_vyska NUMBER, p_delka NUMBER, p_hx NUMBER, p_ho NUMBER, p_popis VARCHAR2) IS
+    v_errmsg VARCHAR2(4000);
   BEGIN
     DBMS_OUTPUT.PUT_LINE('Test: ' || p_popis);
     INSERT INTO HRA (sirka, vyska, delka_rady, hrac_x_id, hrac_o_id, zacina_symbol, stav_id)
@@ -12,7 +13,11 @@ DECLARE
     DBMS_OUTPUT.PUT_LINE('CHYBA: Hra se nespravne zalozila!');
   EXCEPTION
     WHEN OTHERS THEN
-      DBMS_OUTPUT.PUT_LINE('Spravne zachyceno: ' || SQLERRM);
+      v_errmsg := SQLERRM;
+      IF INSTR(v_errmsg, CHR(10)) > 0 THEN
+        v_errmsg := SUBSTR(v_errmsg, 1, INSTR(v_errmsg, CHR(10)) - 1);
+      END IF;
+      DBMS_OUTPUT.PUT_LINE('Spravne zachyceno: ' || v_errmsg);
   END;
 BEGIN
   SELECT id INTO v_stav_roze FROM STAV WHERE kod = 'ROZEHRANA';

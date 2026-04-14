@@ -1,17 +1,16 @@
-DECLARE
-*
-ERROR at line 1:
-ORA-04091: table SYSTEM.TAH is mutating, trigger/function may not see it
-ORA-06512: at "SYSTEM.VYHRA", line 6
-ORA-06512: at "SYSTEM.VYHRA", line 6
-ORA-06512: at "SYSTEM.TRG_TAH_PO_VLOZENI", line 4
-ORA-04088: error during execution of trigger 'SYSTEM.TRG_TAH_PO_VLOZENI'
-ORA-06512: at line 24
+--- PAPIR ---
+ 1: XXXX      
+ 2: OOOOO     
+ 3: X         
+ 4:           
+ 5:           
+ 6:           
+ 7:           
+ 8:           
+ 9:           
+10:           
+--- PROHRY_ZACINAJICI ---
 
-https://docs.oracle.com/error-help/db/ora-04091/
 
+PL/SQL procedure successfully completed.
 
-More Details :
-https://docs.oracle.com/error-help/db/ora-04091/
-https://docs.oracle.com/error-help/db/ora-06512/
-https://docs.oracle.com/error-help/db/ora-04088/
