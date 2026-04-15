@@ -21,22 +21,34 @@ CREATE OR REPLACE TRIGGER trg_tah_po_vlozeni
 FOR INSERT ON TAH
 COMPOUND TRIGGER
   v_hra_id NUMBER;
+  v_hrac_id NUMBER; -- Přidáno pro zjištění, kdo právě táhl
+
   AFTER EACH ROW IS
   BEGIN
     v_hra_id := :NEW.hra_id;
+    v_hrac_id := :NEW.hrac_id;
   END AFTER EACH ROW;
 
   AFTER STATEMENT IS
-    v_stav_vyhra_id NUMBER;
-    v_stav_remiza_id NUMBER;
+    v_hx NUMBER;
+    v_ho NUMBER;
+    v_zac CHAR(1);
   BEGIN
     IF v_hra_id IS NOT NULL THEN
       IF VYHRA(v_hra_id) THEN 
-        SELECT id INTO v_stav_vyhra_id FROM STAV WHERE kod = 'VYHRA_ZAC';
-        UPDATE HRA SET stav_id = v_stav_vyhra_id WHERE id = v_hra_id;
+        -- Zjistíme, kdo hrál s jakým symbolem
+        SELECT hrac_x_id, hrac_o_id, zacina_symbol INTO v_hx, v_ho, v_zac FROM HRA WHERE id = v_hra_id;
+        
+        -- Pokud vyhrál ten, kdo začínal
+        IF (v_hrac_id = v_hx AND v_zac = 'X') OR (v_hrac_id = v_ho AND v_zac = 'O') THEN
+          UPDATE HRA SET stav_id = (SELECT id FROM STAV WHERE kod = 'VYHRA_ZAC') WHERE id = v_hra_id;
+        -- Pokud vyhrál ten druhý
+        ELSE
+          UPDATE HRA SET stav_id = (SELECT id FROM STAV WHERE kod = 'PROHRA_ZAC') WHERE id = v_hra_id;
+        END IF;
+
       ELSIF REMIZA(v_hra_id) THEN
-        SELECT id INTO v_stav_remiza_id FROM STAV WHERE kod = 'REMIZA';
-        UPDATE HRA SET stav_id = v_stav_remiza_id WHERE id = v_hra_id;
+        UPDATE HRA SET stav_id = (SELECT id FROM STAV WHERE kod = 'REMIZA') WHERE id = v_hra_id;
       END IF;
     END IF;
   END AFTER STATEMENT;

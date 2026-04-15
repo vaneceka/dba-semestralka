@@ -10,6 +10,7 @@
  9:           
 10:           
 --- PROHRY_ZACINAJICI ---
+hra_id=3, zacinajici=Alice, pocet_tahu=10
 
 
 PL/SQL procedure successfully completed.
